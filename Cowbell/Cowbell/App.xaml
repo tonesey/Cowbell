@@ -1,0 +1,44 @@
+﻿<Application 
+    x:Class="Centapp.Cowbell.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <!--<local:LocalizedStrings xmlns:local="clr-namespace:DeveloperExcuses" x:Key="LocalizedStrings" />-->
+
+        <Storyboard x:Key="FadeSb">
+            <DoubleAnimation
+                            Storyboard.TargetProperty="Opacity"  
+                            From="0.0" To="1.0" Duration="0:0:0.5" AutoReverse="False"  
+                            RepeatBehavior="1x" 
+                        />
+        </Storyboard>
+
+        <Storyboard  x:Key="RotateSb1">
+            <DoubleAnimation
+                Storyboard.TargetProperty="(TextBlock.RenderTransform).(RotateTransform.Angle)"
+                From="90" To="0" Duration="0:0:0.5" 
+                RepeatBehavior="1x" />
+        </Storyboard>
+        
+        <Storyboard  x:Key="RotateSb2">
+            <DoubleAnimation
+                Storyboard.TargetProperty="(TextBlock.RenderTransform).(RotateTransform.Angle)"
+                From="-90" To="0" Duration="0:0:0.5" 
+                RepeatBehavior="1x" />
+        </Storyboard>
+        
+        
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

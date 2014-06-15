@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{6EC2A8B1-36EE-4CC3-A2D1-6CAD9EAEE8B7}" Title="Campanaccio BRAZIL 2014" RuntimeType="Silverlight" Version="1.0.2" Genre="apps.normal" Author="centapp" Description="Il primo e unico campanaccio al mondo per Windows Phone!" Publisher="centapp">
+    <IconPath IsRelative="true" IsResource="false">AppIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_SENSORS" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="DeveloperExcusesToken" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">TileImage.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>Campanaccio</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>
