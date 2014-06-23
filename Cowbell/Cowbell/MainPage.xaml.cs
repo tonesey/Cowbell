@@ -38,16 +38,16 @@ namespace Centapp.Cowbell
         private int _shakesCounter = 0;
 
         private const string _buyapppageXaml = "/BuyAppPage.xaml";
-        private const string _infopageXaml = "/InfoPage.xaml";
+        private const string _infopageXaml = "/Info.xaml";
 
         // Constructor
         public MainPage()
         {
             InitializeComponent();
 
-            CultureInfo cc, cuic;
-            cc = Thread.CurrentThread.CurrentCulture;
-            cuic = Thread.CurrentThread.CurrentUICulture;
+            //CultureInfo cc, cuic;
+            //cc = Thread.CurrentThread.CurrentCulture;
+            //cuic = Thread.CurrentThread.CurrentUICulture;
 
             //Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-ES");
@@ -57,8 +57,35 @@ namespace Centapp.Cowbell
             Loaded += MainPage_Loaded;
 
             ((App)Application.Current).BackFromBuyPage = false;
-            
 
+            BuildApplicationBar();
+        }
+
+        private void BuildApplicationBar()
+        {
+            // Set the page's ApplicationBar to a new instance of ApplicationBar.
+
+            if (ApplicationBar == null)
+            {
+                ApplicationBar = new ApplicationBar();
+
+                var btnInfo = new ApplicationBarIconButton(new Uri("/Resources/appbar/info.png", UriKind.Relative));
+                btnInfo.Text = AppResources.AppBarButtonInfoText;
+                btnInfo.Click += AppBarButtonInfo_OnClick;
+                ApplicationBar.Buttons.Add(btnInfo);
+
+                // Create a new button and set the text value to the localized string from AppResources.
+                var btnRate = new ApplicationBarIconButton(new Uri("/Resources/appbar/like.png", UriKind.Relative));
+                btnRate.Text = AppResources.AppBarButtonRateText;
+                btnRate.Click += AppBarButtonRate_OnClick;
+                ApplicationBar.Buttons.Add(btnRate);
+
+                ApplicationBar.Mode = ApplicationBarMode.Minimized;
+            }
+        }
+
+        void btnRate_Click(object sender, EventArgs e)
+        {
         }
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -70,8 +97,7 @@ namespace Centapp.Cowbell
         private void InitCaptions()
         {
             TextBlockInfos.Text = AppResources.MainPageTextBoxInfoText;
-            AppBarButtonInfo.Text = AppResources.AppBarButtonInfoText;
-            AppBarButtonRate.Text = AppResources.AppBarButtonRateText;
+
         }
 
         private void InitTextInfo()

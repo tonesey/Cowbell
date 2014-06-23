@@ -82,7 +82,7 @@
             <Border x:Name="BorderTextInfo"  Margin="0,0,0,15" Padding="10"
                      BorderThickness="1" 
                      VerticalAlignment="Bottom"
-                     BorderBrush="LightGray" Height="140" Width="420" 
+                     BorderBrush="LightGray" Height="120" Width="420" 
                      CornerRadius="10" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <CompositeTransform/>
@@ -97,7 +97,7 @@
 
                 <TextBlock  x:Name="TextBlockInfos" VerticalAlignment="Center" Text="$alza il volume e agita il telefono!" 
                             TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Right" 
-                            FontSize="40" Foreground="#FF112061" FontFamily=".\Fonts\ITCKRIST.TTF#Kristen ITC" Margin="0,3,38,2">
+                            FontSize="32" Foreground="#FF112061" FontFamily=".\Fonts\ITCKRIST.TTF#Kristen ITC" Margin="0,3,38,2">
                 </TextBlock>
             </Border>
         </Grid>
@@ -109,12 +109,12 @@
         <my:AdControl Visibility="Collapsed" Grid.Row="1" AdUnitId="10033763"  Width="480"  Height="80" Margin="0,10,0,0" ApplicationId="e5d77552-3a81-4afe-8e18-cf529ba9c737" Name="adControl1"/>
     </Grid>
 
-    <phone:PhoneApplicationPage.ApplicationBar>
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="False" Mode="Minimized">
             <shell:ApplicationBarIconButton x:Name="AppBarButtonInfo" IconUri="/Resources/appbar/info.png" Text="$info" Click="AppBarButtonInfo_OnClick"/>
             <shell:ApplicationBarIconButton x:Name="AppBarButtonRate" IconUri="/Resources/appbar/like.png" Text="$vota" Click="AppBarButtonRate_OnClick"/>
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
 
 
 </phone:PhoneApplicationPage>
