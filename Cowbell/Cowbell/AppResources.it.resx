@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppBarButtonInfoText" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="AppBarButtonRateText" xml:space="preserve">
+    <value>vota!</value>
+  </data>
+  <data name="BuyAppPageText" xml:space="preserve">
+    <value>Uff.... fammi riposare un po'... :) Vuoi acquistare la versione completa per scampanare senza alcuna interruzione??</value>
+  </data>
+  <data name="BuyAppPageTextNoButton" xml:space="preserve">
+    <value>No, grazie!</value>
+  </data>
+  <data name="BuyAppPageTextYesButton" xml:space="preserve">
+    <value>Certo</value>
+  </data>
+  <data name="InfoPageInfoTextblock" xml:space="preserve">
+    <value>Il primo e unico campanaccio al mondo per smartphone!</value>
+  </data>
+  <data name="MainPageTextBoxInfoText" xml:space="preserve">
+    <value>alza il volume e agita il telefono</value>
+  </data>
   <data name="RatingMessage1" xml:space="preserve">
     <value>Vota 5 stelle per questa app sullo store! :)</value>
   </data>

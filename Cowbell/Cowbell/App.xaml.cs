@@ -17,7 +17,7 @@ using Microsoft.Phone.Marketplace;
 using Microsoft.Phone.Shell;
 using System.Threading;
 using Microsoft.Xna.Framework.Audio;
-using Wp7Shared.Helpers;
+using Wp8Shared.Helpers;
 
 
 namespace Centapp.Cowbell
@@ -80,7 +80,7 @@ namespace Centapp.Cowbell
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
             InitApp();
-            FeedbackHelper.Default.Launching();
+            FeedbackHelper.Default.Launching(!IsTrial);
         }
 
         private void InitApp()
@@ -218,5 +218,7 @@ namespace Centapp.Cowbell
         public bool AlreadyAskedRating { get; set; }
 
         public string AppTitle { get { return "Campanaccio BRAZIL 2014"; } }
+
+        public bool BackFromBuyPage { get; set; }
     }
 }

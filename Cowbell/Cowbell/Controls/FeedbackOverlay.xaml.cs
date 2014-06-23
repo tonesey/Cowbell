@@ -10,7 +10,7 @@ using Microsoft.Phone.Shell;
 using System.ComponentModel;
 using Microsoft.Phone.Tasks;
 using Microsoft.Phone.Info;
-using Wp7Shared.Helpers;
+using Wp8Shared.Helpers;
 
 namespace Centapp.Cowbell.Controls
 {

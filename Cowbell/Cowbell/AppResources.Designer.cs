@@ -61,6 +61,69 @@ namespace Centapp.Cowbell {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to info.
+        /// </summary>
+        internal static string AppBarButtonInfoText {
+            get {
+                return ResourceManager.GetString("AppBarButtonInfoText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rate.
+        /// </summary>
+        internal static string AppBarButtonRateText {
+            get {
+                return ResourceManager.GetString("AppBarButtonRateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uff... Let me rest a bit.... do you want to buy full version without any interrptions? :).
+        /// </summary>
+        internal static string BuyAppPageText {
+            get {
+                return ResourceManager.GetString("BuyAppPageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No, thanks.
+        /// </summary>
+        internal static string BuyAppPageTextNoButton {
+            get {
+                return ResourceManager.GetString("BuyAppPageTextNoButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes!.
+        /// </summary>
+        internal static string BuyAppPageTextYesButton {
+            get {
+                return ResourceManager.GetString("BuyAppPageTextYesButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The first and only cowbell for smartphones in the world!!!.
+        /// </summary>
+        internal static string InfoPageInfoTextblock {
+            get {
+                return ResourceManager.GetString("InfoPageInfoTextblock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to raise phone volume and shake it!!!.
+        /// </summary>
+        internal static string MainPageTextBoxInfoText {
+            get {
+                return ResourceManager.GetString("MainPageTextBoxInfoText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to rate app!.
         /// </summary>
         internal static string rateAppButton {

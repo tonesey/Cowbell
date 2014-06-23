@@ -139,4 +139,25 @@ Why not give us a 5 star rating to show your appreciation?</value>
   <data name="RatingYes" xml:space="preserve">
     <value>rate 5 stars</value>
   </data>
+  <data name="AppBarButtonInfoText" xml:space="preserve">
+    <value>info</value>
+  </data>
+  <data name="AppBarButtonRateText" xml:space="preserve">
+    <value>rate</value>
+  </data>
+  <data name="BuyAppPageText" xml:space="preserve">
+    <value>Uff... Let me rest a bit.... do you want to buy full version without any interrptions? :)</value>
+  </data>
+  <data name="BuyAppPageTextNoButton" xml:space="preserve">
+    <value>No, thanks</value>
+  </data>
+  <data name="BuyAppPageTextYesButton" xml:space="preserve">
+    <value>Yes!</value>
+  </data>
+  <data name="InfoPageInfoTextblock" xml:space="preserve">
+    <value>The first and only cowbell for smartphones in the world!!!</value>
+  </data>
+  <data name="MainPageTextBoxInfoText" xml:space="preserve">
+    <value>raise phone volume and shake it!!!</value>
+  </data>
 </root>

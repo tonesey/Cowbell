@@ -9,6 +9,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Tasks;
@@ -27,6 +28,14 @@ namespace Centapp.Cowbell
         void BuyAppPage_Loaded(object sender, RoutedEventArgs e)
         {
             StartCountDown();
+            InitCaptions();
+        }
+
+        private void InitCaptions()
+        {
+            InfoTextBlock2.Text = AppResources.BuyAppPageText;
+            ButtonBuyApp.Content = AppResources.BuyAppPageTextYesButton;
+            ButtonNoThanks.Content = AppResources.BuyAppPageTextNoButton;
         }
 
         private void StartCountDown()
@@ -83,6 +92,13 @@ namespace Centapp.Cowbell
         private void noThanksButton_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            ((App)Application.Current).BackFromBuyPage = true;
+
         }
     }
 }

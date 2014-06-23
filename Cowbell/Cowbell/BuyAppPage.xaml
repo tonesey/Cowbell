@@ -28,14 +28,14 @@
             <ProgressBar x:Name="WaitProgressBar" Height="30" Value="0" />
             <TextBlock x:Name="InfoTextBlock2" 
                        TextWrapping="Wrap" 
-                       Text="Uff.... fammi riposare un po'... :) Vuoi acquistare la versione completa per scampanare senza alcuna interruzione??" 
+                       Text="$Uff.... fammi riposare un po'... :) Vuoi acquistare la versione completa per scampanare senza alcuna interruzione??" 
                        Foreground="#FF112061" FontFamily=".\Fonts\ITCKRIST.TTF#Kristen ITC"
                        TextAlignment="Center"
                        FontSize="{StaticResource PhoneFontSizeLarge}"
                        Style="{StaticResource PhoneTextAccentStyle}" Height="250" />
            
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="ButtonBuyApp" Content="Certo!" Height="100" Width="200" Tap="buyAppButton_Tap" FontFamily=".\Fonts\ITCKRIST.TTF#Kristen ITC">
+                <Button x:Name="ButtonBuyApp" Content="$Certo!" Height="100" Width="200" Tap="buyAppButton_Tap" FontFamily=".\Fonts\ITCKRIST.TTF#Kristen ITC">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.4" >
                             <GradientStop Color="Orange" Offset="0"/>
@@ -43,7 +43,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name="ButtonNoThanks" Content="No grazie" Height="100" Width="200" Tap="noThanksButton_Tap" FontFamily=".\Fonts\ITCKRIST.TTF#Kristen ITC">
+                <Button x:Name="ButtonNoThanks" Content="$No grazie" Height="100" Width="200" Tap="noThanksButton_Tap" FontFamily=".\Fonts\ITCKRIST.TTF#Kristen ITC">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.4">
                             <GradientStop Color="Orange" Offset="0"/>

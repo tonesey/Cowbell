@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{6EC2A8B1-36EE-4CC3-A2D1-6CAD9EAEE8B7}" Title="Campanaccio BRAZIL 2014" RuntimeType="Silverlight" Version="1.0.2" Genre="apps.normal" Author="centapp" Description="Il primo e unico campanaccio al mondo per Windows Phone!" Publisher="centapp">
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="it" />
+  <Languages xmlns="">
+    <Language code="it-IT" />
+  </Languages>
+  <App xmlns="" ProductID="{20ff5cd5-22c4-4173-b869-732fd7e6c99b}" Title="Campanaccio BRAZIL 2014" RuntimeType="Silverlight" Version="1.0.5" Genre="apps.normal" Author="centapp" Description="Il primo e unico campanaccio al mondo per Windows Phone!" Publisher="centapp" PublisherID="{9ac196e4-63f5-4d54-aa60-4cba70bc0eca}">
     <IconPath IsRelative="true" IsResource="false">AppIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -12,12 +16,31 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="DeveloperExcusesToken" TaskName="_default">
-        <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">TileImage.png</BackgroundImageURI>
+        <TemplateFlip>
+          <SmallImageURI IsResource="false" IsRelative="true">TileImage_small.png</SmallImageURI>
           <Count>0</Count>
+          <BackgroundImageURI IsResource="false" IsRelative="true">TileImage_medium.png</BackgroundImageURI>
           <Title>Campanaccio</Title>
-        </TemplateType5>
+          <BackContent>
+          </BackContent>
+          <BackBackgroundImageURI>
+          </BackBackgroundImageURI>
+          <BackTitle>
+          </BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">TileImage_big.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">
+          </LargeBackBackgroundImageURI>
+          <DeviceLockImageURI>
+          </DeviceLockImageURI>
+          <HasLarge>True</HasLarge>
+        </TemplateFlip>
       </PrimaryToken>
     </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
   </App>
 </Deployment>

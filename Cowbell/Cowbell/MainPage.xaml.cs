@@ -16,12 +16,14 @@ using Centapp.Cowbell;
 using Centapp.Cowbell.Helpers;
 using Microsoft.Devices;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Tasks;
 using Microsoft.Xna.Framework.Audio;
 using Wp7Shared.Sensors;
 using Microsoft.Phone.Shell;
 using System.Resources;
 using System.Globalization;
 using System.Threading;
+using Wp8Shared.Helpers;
 
 
 namespace Centapp.Cowbell
@@ -36,6 +38,7 @@ namespace Centapp.Cowbell
         private int _shakesCounter = 0;
 
         private const string _buyapppageXaml = "/BuyAppPage.xaml";
+        private const string _infopageXaml = "/InfoPage.xaml";
 
         // Constructor
         public MainPage()
@@ -53,12 +56,22 @@ namespace Centapp.Cowbell
             _sbText = (Storyboard)Resources["TextAnimationSb"];
             Loaded += MainPage_Loaded;
 
+            ((App)Application.Current).BackFromBuyPage = false;
+            
 
         }
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
+            InitCaptions();
             InitTextInfo();
+        }
+
+        private void InitCaptions()
+        {
+            TextBlockInfos.Text = AppResources.MainPageTextBoxInfoText;
+            AppBarButtonInfo.Text = AppResources.AppBarButtonInfoText;
+            AppBarButtonRate.Text = AppResources.AppBarButtonRateText;
         }
 
         private void InitTextInfo()
@@ -143,10 +156,12 @@ namespace Centapp.Cowbell
             //    userNavigatedAwayFromBuyPage = true;
             //}
 
-            userNavigatedAwayFromBuyPage = (e.NavigationMode == NavigationMode.Back) && ((App)Application.Current).IsTrial;
+            userNavigatedAwayFromBuyPage = (e.NavigationMode == NavigationMode.Back) && ((App)Application.Current).IsTrial && ((App)Application.Current).BackFromBuyPage;
 
             if (userNavigatedAwayFromBuyPage)
             {
+                ((App)Application.Current).BackFromBuyPage = false;
+
                 if (!((App)Application.Current).WaitIntoBuyPageCompleted)
                 {
                     //l'utente ha fatto back senza attendere il completamento dell'attesa nella versione trial
@@ -162,6 +177,18 @@ namespace Centapp.Cowbell
         private void GotoBuyPage()
         {
             NavigationService.Navigate(new Uri(_buyapppageXaml, UriKind.Relative));
+        }
+
+        private void AppBarButtonInfo_OnClick(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri(_infopageXaml, UriKind.Relative));
+        }
+
+        private void AppBarButtonRate_OnClick(object sender, EventArgs e)
+        {
+            FeedbackHelper.Default.Reviewed();
+            var marketplace = new MarketplaceReviewTask();
+            marketplace.Show();
         }
     }
 }
