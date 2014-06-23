@@ -150,8 +150,8 @@
     <Compile Include="Controls\FeedbackOverlay.xaml.cs">
       <DependentUpon>FeedbackOverlay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AppResources.it.Designer.cs">
-      <DependentUpon>AppResources.it.resx</DependentUpon>
+    <Compile Include="AppResources.it-IT.Designer.cs">
+      <DependentUpon>AppResources.it-IT.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -204,9 +204,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AppResources.it.resx">
+    <EmbeddedResource Include="AppResources.it-IT.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.it.Designer.cs</LastGenOutput>
+      <LastGenOutput>AppResources.it-IT.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Resources\mucca_terr.jpg" />
     <Resource Include="Resources\cowbell.PNG" />

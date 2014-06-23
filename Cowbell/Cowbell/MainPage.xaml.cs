@@ -45,9 +45,9 @@ namespace Centapp.Cowbell
         {
             InitializeComponent();
 
-            //CultureInfo cc, cuic;
-            //cc = Thread.CurrentThread.CurrentCulture;
-            //cuic = Thread.CurrentThread.CurrentUICulture;
+            CultureInfo cc, cuic;
+            cc = Thread.CurrentThread.CurrentCulture;
+            cuic = Thread.CurrentThread.CurrentUICulture;
 
             //Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-ES");
